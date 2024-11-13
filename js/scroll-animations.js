@@ -1,15 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
   const options = {
-    threshold: 0.1, // Trigger when 10% of element is in view
+    threshold: 0.1, // Trigger animation when 10% of the element is in view
   };
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      console.log("Observing entry:", entry); // Debug log
       if (entry.isIntersecting) {
-        console.log("Intersecting:", entry.target); // Debug log
         entry.target.classList.add("fade-in");
-        observer.unobserve(entry.target); // Stop observing once animation is applied
+        entry.target.classList.remove("hidden"); // Ensure element stays visible
+      } else {
+        entry.target.classList.remove("fade-in"); // Fade out when scrolling out
+        entry.target.classList.add("hidden");
       }
     });
   }, options);
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Select elements to observe
   const elementsToObserve = document.querySelectorAll(".project, .certification");
   elementsToObserve.forEach(section => {
-    section.classList.add("hidden"); // Add initial hidden class
+    section.classList.add("hidden"); // Initially hide elements
     observer.observe(section);
   });
 });
