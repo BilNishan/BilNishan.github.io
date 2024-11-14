@@ -258,3 +258,183 @@ body, html {
 }
 
 
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  /* Reduce padding and margin for the container */
+  .container {
+    padding: 20px 10px;
+  }
+
+  /* Adjust profile container layout to stack vertically */
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust profile picture size for mobile */
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 20px; /* Adds space below the image */
+  }
+
+  /* Center-align the profile content on mobile */
+  .profile-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Reduce font size of the title and description */
+  .title {
+    font-size: 1.8em;
+  }
+
+  .description {
+    font-size: 1em;
+  }
+
+  /* Adjust the circular buttons */
+  .link-button {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9em;
+  }
+
+  /* Stack navigation links vertically and center them */
+  .top-nav {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Resize the certification images */
+  .certification-images {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .cert-image {
+    width: 40vw;
+    max-width: 150px;
+  }
+
+  /* Center the name-box on top of the content */
+  .name-box {
+    position: static;
+    text-align: center;
+    max-width: 100%;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+
+  /* Center footer content */
+  .footer-content {
+    justify-content: center;
+  }
+}
+
+/* Position the hamburger menu on the right edge */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 10px; /* Move it closer to the screen's edge */
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Each line of the hamburger menu */
+.hamburger-menu div {
+  width: 100%;
+  height: 4px;
+  background-color: #5d6d7e; /* Red color for each line */
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Updated sidebar menu with semi-transparent background */
+.mobile-sidebar {
+  display: none;
+  position: fixed;
+  top: 60px; /* Start below the hamburger icon */
+  right: 0;
+  width: 200px;
+  background-color: #5d6d7e;
+  opacity: 0.75; /* Makes entire sidebar, including contents, 80% opaque */
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 0 0 10px 10px; /* Slight rounding for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add a shadow for depth */
+}
+
+/* Styling links inside the sidebar with a 3D hover effect */
+.mobile-sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.mobile-sidebar a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); /* Adds a slight 3D hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow on hover for 3D effect */
+}
+
+
+/* Mobile-specific layout adjustments */
+@media (max-width: 768px) {
+  /* Show hamburger menu on mobile */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Hide the top navigation */
+  .top-nav {
+    display: none;
+  }
+
+  /* Reorder elements in mobile view */
+  .profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Move the profile picture to the top */
+  .profile-pic {
+    order: 1;
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* Place About Me section below the profile picture */
+  .about-me {
+    order: 2;
+  }
+
+  /* Links section comes after About Me */
+  .links {
+    order: 3;
+    display: flex;
+    gap: 10px;
+  }
+}
+

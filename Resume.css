@@ -26,8 +26,7 @@
 }
 
 .resume-container img {
-    height: 120vh;
-    max-height: 150vh;
+    height: auto;
     width: auto;
     margin: 20px;
     padding: 20px;

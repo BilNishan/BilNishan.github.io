@@ -61,3 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//Mobile menu option toggling
+function toggleMenu() {
+  const sidebar = document.querySelector('.mobile-sidebar');
+  sidebar.style.display = sidebar.style.display === 'flex' ? 'none' : 'flex';
+}
