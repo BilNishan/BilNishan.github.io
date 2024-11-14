@@ -1,0 +1,242 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Full-height wrapper to use Flexbox for layout */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+
+/* Centering the main-wrapper for main content */
+.main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+
+/* Left-aligned Name Box with Full Width Background */
+.name-box {
+  position: absolute;
+  top: 2%; /* Relative to the viewport height */
+  left: 0;
+  background-color: #5d6d7e;
+  color: #fff;
+  padding: 1% 2%; /* Relative padding for consistent appearance on all screens */
+  border-radius: 0 0.5em 0.5em 0; /* Rounded corners on the right only */
+  font-size: 1.2em; /* Keeps font size proportional */
+  font-weight: bold;
+  max-width: 60vw; /* Limits the box width to 60% of the viewport width */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+
+/* Certification Images Section positioning*/
+.certification-images {
+  position: absolute;
+  top: 15vh; /* 15% of viewport height, adjusts based on screen size */
+  left: 0.02vw; /* 0.02% of viewport width, so it aligns close to the left edge */
+  display: flex;
+  flex-direction: column;
+  gap: 2vh; /* 2% of viewport height as spacing between certification images */
+}
+
+/* Certification Image Styling, size and height, zoom*/
+.cert-image {
+  width: 20vw; /* 20% of viewport width, makes image width responsive */
+  max-width: 250px; /* Sets a maximum width to prevent images from getting too large */
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+
+
+/* Top-right navigation menu */
+.top-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Navigation link styling with hover preview tooltip */
+.top-nav a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
+
+/* Position the preview iframe */
+.iframe-preview {
+  position: absolute;
+  top: 40px; /* Distance below the link */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  display: none; /* Hide by default */
+  z-index: 1000;
+}
+
+
+
+
+
+
+/* Profile Container to align picture, about me, and links */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+/* Profile picture styling */
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  margin-right: 40px;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Profile content styling */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-me {
+  max-width: 500px;
+  text-align: left;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #666;
+  font-size: 1.1em;
+}
+
+/* Circular link buttons styling */
+.links {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: transform 0.15s ease, opacity 1s ease, transform 0.8s ease;
+  border: 1px solid black;
+}
+
+.link-button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3) saturate(0.5);
+}
+
+/* Specific colors for each link button */
+.resume {
+  background-color: #3498db;
+}
+
+.projects {
+  background-color: #fe4d27;
+}
+
+.contact {
+  background-color: #5d6d7e;
+}
+
+
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd; /* Optional border at the top of the footer */
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer .social-media a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+
+
+
+/* Hidden class to apply initial opacity and translate effect */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Fade-in effect on load and scroll */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
