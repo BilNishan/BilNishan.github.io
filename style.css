@@ -13,18 +13,6 @@ body {
 }
 
 
-/* Initial hidden state and fade-in animation */
-.hidden {
-  opacity: 0;
-  transform: translateY(50px); /* Increase transform distance */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Slower transition */
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 
 
@@ -32,26 +20,34 @@ body {
 header {
   text-align: center;
   padding: 2rem;
-  background-color: #007acc;
-  color: #fff;
+  background-color: #C6C2BE; /* Change background to white */
+  color: #333; /* Dark text color for readability */
+  border-bottom: 1px solid #ddd; /* Optional: subtle bottom border for separation */
 }
 
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color: #333; /* Ensure dark color for readability on white */
 }
 
 header p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: #555; /* Slightly lighter text color */
 }
 
 header nav a {
-  color: #fff;
+  color: #007acc; /* Accent color for links to keep them distinct */
   margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
 }
+
+header nav a:hover {
+  color: #005fa3; /* Slightly darker shade on hover */
+}
+
 
 /* Sections */
 section {
@@ -125,4 +121,43 @@ button {
 
 button:hover {
   background-color: #005fa3;
+}
+
+
+/* Initial hidden state */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Starts lower down for a more noticeable entrance */
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeInEffect 0.8s ease-out forwards;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Starts lower and moves up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Ends at original position */
+  }
+}
+
+/* Fade-out animation */
+.fade-out {
+  animation: fadeOutEffect 0.8s ease-out forwards;
+}
+
+@keyframes fadeOutEffect {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px); /* Moves down and fades out */
+  }
 }
