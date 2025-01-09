@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
 <div class="wrapper">
@@ -25,8 +25,8 @@
     <!-- Navigation Menu -->
     <nav class="top-nav">
         <a href="resume.html" data-url="resume.html">Resume</a>
-        <a href="projects.html" data-url="projects.html">Projects</a>
         <a href="contact.html" data-url="contact.html">Contact</a>
+        <a href="projects.html" data-url="projects.html">Projects</a>
     </nav>
 
     <!-- Hamburger Menu Icon for Mobile -->
@@ -39,48 +39,84 @@
     <!-- Sidebar Menu for Mobile -->
     <div class="mobile-sidebar">
         <a href="resume.html">Resume</a>
-        <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
+
     </div>
 
 
-    <!-- Main Content Section -->
-    <div class="main-wrapper">
-        <div class="container">
-            <div class="profile-container">
-                <img src="Resources/Profile.jpg" alt="Profile Picture" class="profile-pic">
-                <div class="profile-content">
-                    <div class="about-me">
-                        <h1 class="title">About Me</h1>
-                        <p class="description">
-                            Driven by a deep interest in cybersecurity, I’m expanding my skills through real-world experiences and personal projects—learning how to identify vulnerabilities, strengthen defenses, and adopt a proactive, solutions-oriented approach to risk management. My internship as an IT Support Engineer has deepened my expertise in areas such as Google Workspace, Azure Active Directory, and end-point security, all of which I now aim to apply in a security-focused role.
-                        </p>
+    <div class="content-wrapper">
+        <!-- Main Content Section -->
+        <div class="main-wrapper">
+            <div class="container">
+                <div class="profile-container">
+                    <img src="Resources/Profile.jpg" alt="Profile Picture" class="profile-pic">
+                    <div class="profile-content">
+                        <div class="about-me">
+                            <h1 class="title">About Me</h1>
+                            <p class="description">
+                                Driven by a deep interest in cybersecurity, I’m expanding my skills through real-world experiences and personal projects—learning how to identify vulnerabilities, strengthen defenses, and adopt a proactive, solutions-oriented approach to risk management. My internship as an IT Support Engineer has deepened my expertise in areas such as Google Workspace, Azure Active Directory, and end-point security, all of which I now aim to apply in a security-focused role.
+                            </p>
 
+                        </div>
+
+                        <!-- Links Section -->
+                        <section class="links">
+                            <a href="https://www.linkedin.com/in/nishan-th101/" class="link-button LinkedIn">LinkedIn</a>
+                            <a href="https://github.com/BilNishan" class="link-button Github">Github</a>
+                        </section>
                     </div>
-
-                    <!-- Links Section -->
-                    <section class="links">
-                        <a href="resume.html" class="link-button resume">Resume</a>
-                        <a href="projects.html" class="link-button projects">Projects</a>
-                        <a href="contact.html" class="link-button contact">Contact</a>
-                    </section>
                 </div>
             </div>
         </div>
+
+        <section class="projects-section">
+            <div class="projects-container">
+                <a href="project1-details.html" class="project-card">
+                    <h3>Log Data Collection and SIEM Monitoring</h3>
+                    <p class="tools-used"> <u>Tools Used: </u> Splunk, Snort, & pfsense</p>
+                    <p> <u>Objective: </u> Collect and monitor log data for security purposes.</p>
+                    <div class="hover-details">
+                        <p>Detailed Write-up: Click to see more >>></p>
+                    </div>
+                </a>
+                <a href="project2-details.html" class="project-card">
+                    <h3>Project Name 2</h3>
+                    <p class="tools-used"><u> Tools:</u> Docker, Kubernetes</p>
+                    <p> <u>Objective: </u> To be added </p>
+                    <div class="hover-details">
+                        <p>Detailed Write-up: Click to see more >>></p>
+                    </div>
+                </a>
+                <a href="project3-details.html" class="project-card">
+                    <h3>Project Name 3</h3>
+                    <p class="tools-used">Tools: React, Firebase</p>
+                    <p> <b>Objective: </b> To be added </p>
+                    <div class="hover-details">
+                        <p>Detailed Write-up: Click to see more >>></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
     </div>
+
+
+
     <footer>
         <div class="footer-content">
-            <p>Email: taraminishan905@gmail.com |</p>
+            <p>Email: taraminishan905@gmail.com </p>
+            <!--
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/nishan-th101/">LinkedIn |</a>
                 <a href="https://github.com/BilNishan">Github</a>
             </div>
+             -->
         </div>
     </footer>
 </div>
 
 
 
-<script src="script.js"></script>
+<script src="landing.js"></script>
 </body>
 </html>

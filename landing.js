@@ -1,38 +1,44 @@
-
 // DOMContentLoaded event to ensure elements are loaded before animations
 document.addEventListener("DOMContentLoaded", function () {
+  // Individual elements to animate in order
+  const profilePic = document.querySelector(".profile-pic");
+  const aboutMe = document.querySelector(".about-me");
+  const links = document.querySelectorAll(".link-button");
+//  const certifications = document.querySelector(".certifications");
 
-           const projectCards = document.querySelectorAll(".project-card");
+  // Apply hidden class to each element initially
+  profilePic.classList.add("hidden");
+  aboutMe.classList.add("hidden");
+  links.forEach(link => link.classList.add("hidden"));
+ // certifications.classList.add("hidden");
 
-             projectCards.forEach((card) => {
-                 card.addEventListener("mouseenter", function () {
-                     // Expand the hovered card
-                     card.style.transform = "scale(1.05)";
-                     card.style.zIndex = "10"; // Bring to the front
-                     card.querySelector(".hover-details").style.opacity = "1";
-                 });
+  // Start Profile Picture animation, then About Me shortly after
+  setTimeout(() => {
+    profilePic.classList.remove("hidden");
+    profilePic.classList.add("fade-in");
+  }, 200); // Profile picture appears first with 200ms delay
 
-                 card.addEventListener("mouseleave", function () {
-                     // Revert the hovered card
-                     card.style.transform = "scale(1)";
-                     card.style.zIndex = "1";
-                     card.querySelector(".hover-details").style.opacity = "0";
-                 });
-             });
-         });
+  setTimeout(() => {
+    aboutMe.classList.remove("hidden");
+    aboutMe.classList.add("fade-in");
+  }, 450); // About Me appears just after Profile Picture with a 350ms delay
 
-
+  // Sequential fade-in for each link button with reduced delay
+  links.forEach((link, index) => {
+    setTimeout(() => {
+      link.classList.remove("hidden");
+      link.classList.add("fade-in");
+    }, 500 + index * 200); // Starts at 500ms with a 200ms gap between each button
+  });
 
 
 
   // iframe preview logic for the top navigation links
   document.querySelectorAll('.top-nav a').forEach(link => {
     // Event listener for mouse entering the link
-    link.addEventListener('mouseenter', function(event)  {
-    console.log('mouseenter'); //gives count on console(developer) whenever the mouse enters or registers the mouseenter function
+    link.addEventListener('mouseenter', function(event) {
       const url = link.getAttribute('data-url'); // Get the URL for the iframe preview
       const iframePreview = document.createElement('iframe');
-
 
       // Set the iframe attributes
       iframePreview.src = url;
@@ -56,10 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 //Mobile menu option toggling
 function toggleMenu() {
   const sidebar = document.querySelector('.mobile-sidebar');
   sidebar.style.display = sidebar.style.display === 'flex' ? 'none' : 'flex';
- }
+}

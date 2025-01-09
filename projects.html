@@ -1,1 +1,83 @@
-Soon to be added
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<nav class="top-nav">
+    <a href="resume.html" data-url="resume.html">Resume</a>
+    <a href="contact.html" data-url="contact.html">Contact</a>
+    <a href="index.html" data-url="index.html">Profile</a>
+</nav>
+
+<!-- Hamburger Menu Icon for Mobile -->
+<div class="hamburger-menu" onclick="toggleMenu()">
+    <div></div> <!-- to create on line that css will play with -->
+    <div></div>
+    <div></div>
+</div>
+
+<!-- Sidebar Menu for Mobile -->
+<div class="mobile-sidebar">
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+    <a href="AboutMe.html">Profile</a>
+</div>
+
+
+<div class="layout-container">
+    <div class="wrapper">
+        <!-- Left-aligned Name Box -->
+        <div class="name-box">
+            <span>Nishan Thapa</span>
+        </div>
+
+        <!-- Certifications Section (below the Name Box) -->
+        <div class="certification-images">
+            <img src="/Resources/CompTIA%20Security+%20ce%20certificate.jpg" alt="Certification 1" class="cert-image">
+            <img src="/Resources/CompTIA A+ ce certificate.jpg" alt="Certification 2" class="cert-image">
+        </div>
+    </div>
+
+
+
+    <section class="projects-section">
+        <div class="projects-container">
+            <a href="project1-details.html" class="project-card">
+                <h3>Log Data Collection and SIEM Monitoring</h3>
+                <p class="tools-used"> <b>Tools Used: </b> Splunk, Snort, & pfsense</p>
+                <p> <b>Objective: </b> Collect and monitor log data for security purposes.</p>
+                <div class="hover-details">
+                    <p>Detailed Write-up: Click to see more >>></p>
+                </div>
+            </a>
+            <a href="project2-details.html" class="project-card">
+                <h3>Project Name 2</h3>
+                <p class="tools-used">Tools: Docker, Kubernetes</p>
+                <p> <b>Objective: </b> To be added </p>
+                <div class="hover-details">
+                    <p>Detailed Write-up: Click to see more >>></p>
+                </div>
+            </a>
+            <a href="project3-details.html" class="project-card">
+                <h3>Project Name 3</h3>
+                <p class="tools-used">Tools: React, Firebase</p>
+                <p> <b>Objective: </b> To be added </p>
+                <div class="hover-details">
+                    <p>Detailed Write-up: Click to see more >>></p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

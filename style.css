@@ -13,29 +13,12 @@ body, html {
   color: #333;
 }
 
+
 /* Full-height wrapper to use Flexbox for layout */
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Full viewport height */
-}
-
-/* Centering the main-wrapper for main content */
-.main-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1; /* Ensures this section grows to fill space */
-}
-
-/* Main container styling */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 50px 20px;
-  width: 100%;
 }
 
 /* Left-aligned Name Box with Full Width Background */
@@ -56,16 +39,17 @@ body, html {
 /* Certification Images Section positioning */
 .certification-images {
   position: absolute;
-  top: 15vh; /* 15% of viewport height, adjusts based on screen size */
+  top: 11vh; /* 15% of viewport height, adjusts based on screen size */
   left: 0.02vw; /* 0.02% of viewport width, so it aligns close to the left edge */
   display: flex;
   flex-direction: column;
   gap: 2vh; /* 2% of viewport height as spacing between certification images */
+
 }
 
 /* Certification Image Styling, size and height, zoom */
 .cert-image {
-  width: 20vw; /* 20% of viewport width, makes image width responsive */
+  width: 15vw; /* 20% of viewport width, makes image width responsive */
   max-width: 250px; /* Sets a maximum width to prevent images from getting too large */
   height: auto;
   border-radius: 5px;
@@ -91,8 +75,6 @@ body, html {
 
 
 
-
-
 /* Position the preview iframe */
 .iframe-preview {
   position: absolute;
@@ -110,7 +92,35 @@ body, html {
 
 
 
+.content-wrapper {
+    display: flex;
+    flex: 4;
+    flex-direction: row;
+    width: 100%;
+    gap: 2px; /* Add space between the main-wrapper and projects-section */
+    margin-top: 50px; /* Ensure the content starts below certifications */
+}
 
+
+.main-wrapper {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem; /* Add padding to create spacing */
+    max-width: 95%; /* Ensure it doesn’t encroach on certifications */
+}
+
+
+/* Main container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  width: 100%;
+}
 
 
 /* Profile Container to align picture, about me, and links */
@@ -121,6 +131,7 @@ body, html {
   width: 100%;
   max-width: 900px;
   margin-bottom: 30px;
+  margin-left: 16.5vw; /* Offset to accommodate certification-images */
 }
 
 /* Profile picture styling */
@@ -140,10 +151,11 @@ body, html {
   align-items: flex-start;
   justify-content: space-between;
   transition: opacity 0.8s ease, transform 0.8s ease;
+
 }
 
 .about-me {
-  max-width: 500px;
+  max-width: 450px;
   text-align: left;
 }
 
@@ -187,15 +199,15 @@ body, html {
 }
 
 /* Specific colors for each link button */
-.resume {
-  background-color: #3498db;
-}
-
-.projects {
+.LinkedIn {
   background-color: #fe4d27;
 }
 
-.contact {
+/*.projects {
+  background-color: #fe4d27;
+}*/
+
+.Github {
   background-color: #5d6d7e;
 }
 
@@ -213,10 +225,106 @@ body, html {
 
 
 
-/*Footer */
+
+
+
+
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+/* NEW COPIED CODE FROM INDEX/STYLE.CSS */
+
+
+
+
+/* Projects section on the right */
+.projects-section {
+  flex: 1; /* Take up 1 part of available space */
+  background-color: #f8f9fa; /* Light background to distinguish */
+  padding: 0.1rem; /* Space inside the projects section */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align projects to the top-left */
+}
+
+
+.projects-container {
+     display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    background-color: rgba(93, 109, 126, 0.75); /* Dark background with transparency */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden; /* Prevent overflow from affecting the container */
+}
+
+.project-card {
+    position: relative;
+    display: block;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    height: auto;
+}
+
+.project-card .hover-details {
+    display: none;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+.project-card:hover .hover-details {
+    display: block;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card:hover ~ .project-card {
+    transform: translateY(50px);
+}
+
+
+/*DONE */
+/*DONE */
+/*DONE */
+/*DONE */
+/*DONE */
+
+
+
+
+/*Footer
 .footer {
   display: flex;
-  justify-content: center;  /* Center aligns the entire footer content horizontally */
+  justify-content: center;  /* Center aligns the entire footer content horizontally
   align-items: center;
   text-align: center;
   font-size: 0.9em;
@@ -225,8 +333,9 @@ body, html {
   background-color: #f4f4f4;
   border-top: 1px solid #ddd;
   width: 100%;
-  /* Set the footer to be positioned within the .wrapper */
+  /* Set the footer to be positioned within the .wrapper
 }
+*/
 
 .footer-content {
   display: flex;
